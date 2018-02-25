@@ -1,0 +1,37 @@
+{
+  "name": "webpack-aframe-starter-template",
+  "version": "0.1.0",
+  "description": "Webpack a-frame starter template",
+  "scripts": {
+    "dev": "WEBPACK_ENV=dev webpack-dev-server",
+    "start": "http-server --port ${PORT:-8080} build",
+    "prestart": "npm run build",
+    "build": "mkdir -p build && WEBPACK_ENV=production webpack && ncp src/static/ build/"
+  },
+  "devDependencies": {
+    "@types/aframe": "^0.7.0",
+    "@types/node": "^9.4.6",
+    "autoprefixer-loader": "^3.1.0",
+    "awesome-typescript-loader": "^3.5.0",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.18.0",
+    "exports-loader": "^0.6.2",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "http-server": "^0.8.5",
+    "less-loader": "^2.2.0",
+    "ncp": "^2.0.0",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.12.3",
+    "text-loader": "^0.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "aframe": "^0.7.1",
+    "aframe-animation-component": "^4.0.0-beta9",
+    "aframe-layout-component": "^4.3.1",
+    "aframe-look-at-component": "^0.6.0",
+    "aframe-randomizer-components": "^3.0.2"
+  }
+}
